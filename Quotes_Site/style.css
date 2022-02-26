@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100%;
+  width: 100%;
+  background-color: rgb(8, 8, 32);
+  position: relative;
+  animation: fadeInAnimation ease 1s;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.container {
+  background-color: rgb(60, 60, 218);
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 70%;
+  margin: 0;
+  font-size: 2.5rem;
+  box-shadow: 1px 1px 50px 1px rgba(25, 0, 255, 0.918);
+}
+
+.box {
+  transition: opacity 3s;
+  border-radius: 5px;
+  background-color: rgb(193, 193, 255);
+  box-shadow: 1px 1px 50px 1px rgba(25, 0, 255, 0.918);
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 70%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.twitter {
+  background-color: rgba(9, 34, 255, 0.39);
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.232);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: absolute;
+  top: -13%;
+  left: 70%;
+  width: 57%;
+  height: 30%;
+  transform: rotate(45deg);
+  font-size: 4rem;
+}
+
+.logo {
+  transform: rotate(-45deg);
+  color: rgb(0, 0, 255);
+  animation: rotate 1s linear;
+  transition: transform 0.2s;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.logo:hover {
+  transform: scale(1.4) rotate(-75deg);
+}
+
+.start-quote {
+  font-size: 6rem;
+  padding-left: 3%;
+}
+
+.text {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  height: 100%;
+  overflow-y: auto;
+  /* margin: 3% 3% 0 5%; */
+  margin: 3% 6% 0;
+  font-family: "Courier Prime", monospace;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.text::-webkit-scrollbar {
+  width: 0;
+}
+
+.author {
+  font-family: "Ubuntu Mono", monospace;
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 3%;
+  padding-bottom: 1%;
+  text-align: right;
+}
+
+.button {
+  background-color: blue;
+  cursor: pointer;
+  padding: 1% 0;
+  color: white;
+  font-family: "Ubuntu Mono", monospace;
+  border-radius: 5px 5px 0px 0px;
+  text-align: center;
+}
+
+.sign {
+  font-family: "Courier Prime", monospace;
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 998px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 45%;
+  }
+}
